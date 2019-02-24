@@ -1,0 +1,192 @@
+<%include header %>
+<%include hiddenSidebar %>
+<section id="main">
+        <div class="sell-time">
+            <div class="avt">
+                <span>#1 Selling Theme of All Time</span>
+                <img src="https://avada.theme-fusion.com/wp-content/uploads/2014/09/not_required1.png" alt="" class="not-require">
+                <div class="avada-unique">
+                    <img src="https://avada.theme-fusion.com/wp-content/uploads/2014/09/avada_build_unique.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="join">
+        <div class="container">
+            <div class="join-title white-frame">
+                <h1>Join The <span>450,000+ </span>Satisfied Customers Today</h1>
+                <p>Avada has been the #1 selling theme for more than 5 years, making it the most trusted and complete WordPress theme on the market.  Powerful options & tools, unlimited designs, responsive framework and amazing support are the reasons our customers have fallen in love.  We are dedicated to providing you with the best experience possible. Read below to find out why the sky’s the limit when using Avada.</p>
+            </div>
+        </div>
+    </section>
+    <div id="hand">
+        <div class="container">
+            <img src="./images/hand.webp" alt="">
+        </div>
+    </div>
+    <section id="list-theme" class="black-bg">
+       <div class="more-theme">
+         <div class="container">
+         <div class="about-theme green-frame down-arrow">
+            <h1>Avada Is More Than A Theme, It’s A Powerful Design Tool.</h1>
+            <p>Avada gives you the ability to build virtually any design style. These professionally designed demos below were built entirely from Avada’s included options and require no custom coding. <strong>Every demo is included for free</strong> and can easily be imported with one click . Choose any of these beautiful templates to start building your site, each one can be adapted to fit your needs. Or easily create your own unique design through our most advanced options system on the market.</p>
+        </div>
+       </div>
+        </div>
+        <div class="container">
+            <div class="list-demo">
+                <%products.forEach(function(x){ %>
+                    <div class="demo block demo1">
+                        <img src="<%= x.image %>" alt="">
+                        <div class="theme-title"><h1><%= x.name %></h1></div>
+                    </div>
+                <%} )%> 
+                <a href="/themes">See more</a>&nbsp&nbsp&nbsp&nbsp<a href="/addtheme">Add new avada theme</a>
+            </div>
+        </div>
+    </section>
+    <section id="customize">
+        <div class="customize-title green-frame down-arrow">
+            <h1>Customize Your Entire Site With Ease, No Coding Experience Required!</h1>
+        </div>
+         <div class="container">
+            <img src="https://avada.theme-fusion.com/wp-content/uploads/2016/09/design_desc_v5.jpg" alt="">
+            <div class="avada-features">
+                <div class="option block feature">
+                    <p>Avada’s Option System Is The Leading System Allowing You To Create Virtually Any Design.</p>
+                    <div class="btn btn-green"><span>avada options</span></div>
+                </div>
+                <div class="fustion block feature">
+                    <p>Fusion Builder Allows You To Quickly & Easily Build Unique Pages With A Drag & Drop Interface.</p>
+                    <div class="btn btn-green"><span>fusion builder</span></div>
+                </div>
+                <div class="demo-area block feature">
+                    <p>Avada’s Demo’s Are Professionally Designed, Easy To Import and Even Easier To Adapt To Your Own Needs.</p>
+                    <div class="btn btn-green"><span>avada demos</span></div>
+                </div>
+            </div>
+         </div>
+    </section>
+    <section id="buy-now" class="green-frame">
+        <div class="btn btn-transparent btn-buy-now"><span>buy avada now!</span></div>
+    </section>
+    <section id="control-title">
+        <div class="container">
+            <div class="white-frame take-control down-arrow">
+                <h1>Take Control of Your Website. Yeah, There’s An Option For That.</h1>
+                <p>Avada’s set of features, options and tools make it the most versatile theme on the market by allowing you to take control of virtually every aspect and section of the site.  The powerful customization options & features give you flexibility to create the site you want.</p>
+            </div>
+        </div>
+    </section>
+    <section id="how-to-control" class="black-bg">
+        <div class="container">
+            <div class="control-box">
+                <div class="box1 box block">
+                    <div class="content">
+                        <span>
+                            <img src="https://avada.theme-fusion.com/wp-content/uploads/2016/09/theme_option_v5.jpg" alt="">
+                        </span>
+                        <div class="describe">
+                            <strong>Theme Options</strong>
+                            <p>Plethora of options neatly organized into sections that allow you to build websites without any coding knowledge.</p>
+                        </div>
+                        <div class="btn learn-more"><span>learn more</span></div>
+                    </div>
+                </div>
+                <div class="box2 box block">
+                    <div class="content">
+                        <span>
+                            <img src="https://avada.theme-fusion.com/wp-content/uploads/2014/09/page_option_sm1.jpg" alt="">
+                        </span>
+                        <div class="describe">
+                            <strong>Page Options</strong>
+                            <p>Powerful page options offer greater control over each page/post, allowing each one to have their own custom settings.</p>
+                        </div>
+                        <div class="btn learn-more"><span>learn more</span></div>
+                    </div>
+                </div>
+                <div class="box3 box block">
+                    <div class="content">
+                        <span>
+                            <img src="https://avada.theme-fusion.com/wp-content/uploads/2016/09/fusion_builder_v5-1.jpg" alt="">
+                        </span>
+                        <div class="describe">
+                            <strong>Fusion Builder</strong>
+                            <p>
+                             Fusion Builder is an intuitive page builder that provides “what you see is what you get” drag and drop page building.</p>
+                        </div>
+                        <div class="btn learn-more"><span>learn more</span></div>
+                    </div>
+                </div>
+                <div class="box4 box block">
+                    <div class="content">
+                        <span>
+                            <img src="https://avada.theme-fusion.com/wp-content/uploads/2014/09/fusion_core_sm1.jpg" alt="">
+                        </span>
+                        <div class="describe">
+                            <strong>Fusion Core</strong>
+                            <p>Fusion Core is our companion plugin that holds a tremendous amount of powerful tools and options. $75 value FREE!</p>
+                        </div>
+                        <div class="btn learn-more"><span>learn more</span></div>
+                    </div>
+                </div>
+                <div class="box5 box block">
+                    <div class="content">
+                        <span>
+                            <img src="https://avada.theme-fusion.com/wp-content/uploads/2016/09/elements_v5.jpg" alt="">
+                        </span>
+                        <div class="describe">
+                            <strong>Design Elements</strong>
+                            <p>Over 50 design elements along with hundreds of options give you complete control over your content and styling.</p>
+                        </div>
+                        <div class="btn learn-more"><span>learn more</span></div>
+                    </div>
+                </div>
+                <div class="box6 box block">
+                    <div class="content">
+                        <span>
+                            <img src="https://avada.theme-fusion.com/wp-content/uploads/2014/09/demos_sm1.jpg" alt="">
+                        </span>
+                        <div class="describe">
+                            <strong>One Click Demo Importer</strong>
+                            <p>
+Easily import any of our professionally designed demos with a click of a button. No xml files, it’s a beautiful thing.</p>
+                        </div>
+                        <div class="btn learn-more"><span>learn more</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="addition-features" class="green-frame up-arrow">
+        <div class="btn btn-transparent btn-view-addition-features"><span>View Additional Features!</span></div>
+    </section>
+    <section id="real" class="down-arrow">
+        <div class="container">
+            <div class="grey-frame">
+                <h1>Real Support. Real People.</h1>
+                <p>We know what it’s like to need support. Our philosophy is to treat you as we would like to be treated. With a hands on support center, online documentation and HD video tutorials, it’s no wonder that some of our best reviews are about our amazing support.</p>
+            </div>
+        </div>
+    </section>
+    <section id="user-evaluate">
+        <div class="container review">
+            <div class="user-review">
+                <img src="https://avada.theme-fusion.com/wp-content/uploads/2014/09/support_review.png" alt="">
+            </div>
+            <div class="achievement">
+                <img src="https://avada.theme-fusion.com/wp-content/uploads/2014/09/ipads.jpg" alt="">
+                <div class="satisfy-user">
+                    <span>We Are Proundly Serving Over</span>
+                    <span class="number-user"></span>
+                    <p>Satisfied Customers</p>
+                    <div class="btn btn-green btn-more-review"><span>read more reviews!</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script src="./javascripts/style.js"></script>
+</body>
+
+</html>

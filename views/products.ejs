@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>All themes</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../stylesheets/avada.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  </head>
+  <body>
+      <div class="container">
+        <div class="jumbotron text-center">
+          <a href="/"><img src="https://avada.theme-fusion.com/wp-content/uploads/2015/03/logo.png" alt=""></a>
+          <h1 class="display-3">All Avada theme</h1>
+          <hr class="my-2">
+        </div>
+        <section id="list-theme" class="black-bg">
+            <div class="container">
+                <div class="list-demo">
+                    <%products.forEach(function(x){ %>
+                        <div class="demo block demo1">
+                            <img src="<%= x.image %>" alt="">
+                            <div class="theme-title"><h1><%= x.name %></h1></div>
+                        </div>
+                    <%} )%> 
+                </div>
+            </div>
+            <%if(pages>1){%>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-end">
+
+                        <%if(current===1){ %>
+                            <li class="page-item disabled">
+                                <a class="page-link" tabindex="-1">Previous</a>
+                            </li>  
+                            <%for(i=current;i<=current+2 && i<=pages; i++){ %>
+                                <%if(i===current){ %>
+                                    <li class="active page-item"><a class="page-link"><%= i %></a></li>
+                                <%} else {%>
+                                    <li class="page-item"><a class="page-link" href="/themes/<%= i %>"><%= i %></a></li>
+                                <%} %>  
+                            <%} %> 
+                            <li class="page-item"><a href="/themes/<%= current+1 %>" class="page-link">Next</a></li>      
+
+                        <% }else if (current === pages) { %>
+                            <li class="page-item">
+                                <a class="page-link" href="/themes/<%= current-1 %>" tabindex="-1">Previous</a>
+                            </li>
+                            <%for(i=current - 2;i<=current+2 && i<=pages && i>0; i++){ %>
+                                <%if(i===current){ %>
+                                    <li class="active page-item"><a class="page-link"><%= i %></a></li>
+                                <%} else {%>
+                                    <li class="page-item"><a class="page-link" href="/themes/<%= i %>"><%= i %></a></li>
+                                <%} %>
+                            <%} %>
+                            <li class="disabled page-item "><a class="page-link">Next</a></li>
+
+                        <% } else { %>
+                            <li class="page-item">
+                                <a class="page-link" href="/themes/<%= current-1 %>" tabindex="-1">Previous</a>
+                            </li>
+                            <%for(i=current - 1;i<=current+1 && i<=pages && i>0; i++){ %>
+                                <%if(i===current){ %>
+                                    <li class="active page-item"><a class="page-link"><%= i %></a></li>
+                                <%} else {%>
+                                    <li class="page-item"><a class="page-link" href="/themes/<%= i %>"><%= i %></a></li>
+                                <%} %>
+                            <%} %>
+                            <li class="page-item"><a href="/themes/<%= current+1 %>" class="page-link">Next</a></li>
+                        <% } %>
+                    </ul>
+                </nav>
+            <%} %>
+        </section>
+        
+     </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
