@@ -2,7 +2,6 @@ var express = require('express');
 var router = express.Router();
 var theme = require('../model/product.js');
 const paginate = require('express-paginate');
-
 /* GET home page. */
 router.get('/',async function(req, res, next) {
   theme.find({})
@@ -51,5 +50,4 @@ router.post('/addtheme',function(req,res,next){
 router.get('/dan/:id',function(req,res,next){
   res.send('dan');
 });
-
 module.exports = router;

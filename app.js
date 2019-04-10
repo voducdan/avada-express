@@ -5,15 +5,16 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var session = require('express-session')
 const mongoose = require('mongoose');
+
 const paginate = require('express-paginate');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
-mongoose.connect('mongodb://localhost:27017/avada_product', {useNewUrlParser: true});
+mongoose.connect('mongodb+srv://voducdan:voducdantiep.1@cluster0-oduju.mongodb.net/avada_product?retryWrites=true||mongodb://localhost:27017/avada_product', {useNewUrlParser: true});
 
-// view engine setup
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
