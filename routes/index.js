@@ -47,7 +47,7 @@ router.post('/addtheme',function(req,res,next){
     res.redirect('themes');
   }); 
 });
-router.get('/dan/:id',function(req,res,next){
-  res.send('dan');
+router.get('*',function(req,res,next){
+  res.redirect('/');
 });
 module.exports = router;
